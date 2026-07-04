@@ -24,11 +24,11 @@ Formato de entrada (--input), ver assets/ejemplo_input.json para un caso complet
       "tp_labels": ["TP 1", "TP 2", ...],   // opcional, default "TP 1".."TP N"
       "comisiones": [
         {
-          "titulo": "PROGRAMACION 1 - COMISION 1 - TUTOR MATIAS SANTIAGO TORRES",
+          "titulo": "PROGRAMACION 1 - COMISION 1 - TUTOR NOMBRE APELLIDO",
           "alumnos": [
             {
-              "nombre": "GABRIEL ALFREDO BRIZUELA JIMENEZ",
-              "email": "gabojimenez140@gmail.com",
+              "nombre": "ALUMNO DE EJEMPLO",
+              "email": "alumno.ejemplo@example.com",
               "tps": ["Aprobado", "Aprobado", "Desaprobado", "N/E", ...],
               "autoeval_pcts": [96.3, 100.0, null, ...],   // % por unidad, null = no rendida
               "parcial1_pcts": [60, null],                 // una entrada por instancia rendida

@@ -11,11 +11,11 @@
       "umbral_tp_pct": 100,
       "comisiones": [
         {
-          "titulo": "PROGRAMACION 1 - COMISION 1 - TUTOR MATIAS SANTIAGO TORRES",
+          "titulo": "PROGRAMACION 1 - COMISION 1 - TUTOR NOMBRE APELLIDO",
           "alumnos": [
             {
-              "nombre": "GABRIEL ALFREDO BRIZUELA JIMENEZ",
-              "email": "gabojimenez140@gmail.com",
+              "nombre": "ALUMNO EJEMPLO UNO",
+              "email": "alumno.uno@example.com",
               "tps": ["Aprobado", "Aprobado", "Aprobado"],
               "autoeval_pcts": [96.0, 100.0, 91.0],
               "parcial1_pcts": [45, 60],
@@ -23,8 +23,8 @@
               "tpi_pcts": [90]
             },
             {
-              "nombre": "LUCA JOAQUIN CHIALVO",
-              "email": "lucachialvo123@gmail.com",
+              "nombre": "ALUMNO EJEMPLO DOS",
+              "email": "alumno.dos@example.com",
               "tps": ["Aprobado", "Aprobado", "Aprobado"],
               "autoeval_pcts": [96.0, 100.0, 91.0],
               "parcial1_pcts": [80],
@@ -32,8 +32,8 @@
               "tpi_pcts": [null]
             },
             {
-              "nombre": "GUIDO AGUERO",
-              "email": "guidoaguero14@gmail.com",
+              "nombre": "ALUMNO EJEMPLO TRES",
+              "email": "alumno.tres@example.com",
               "tps": ["Aprobado", "Aprobado", "Desaprobado"],
               "autoeval_pcts": [96.0, 100.0],
               "parcial1_pcts": [],
