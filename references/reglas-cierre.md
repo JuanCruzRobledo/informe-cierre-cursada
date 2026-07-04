@@ -92,24 +92,49 @@ o "promocionados" no cuadra con lo que el tutor esperaba a ojo, preguntale
 explícitamente si los miniquizzes deberían sumar al cálculo de autoevaluación
 antes de asumir que el error está en otro lado.
 
+**Duda abierta #2 (RESUELTA, corrida real Prog I, 04/07/2026):** con Unidad 1/2
+ya excluidas, sobre 712 alumnos el 76% de los RECURSA (338 de 446) caía porque
+no cumplía `autoeval_ok` — de esos, 335 no tenían nota baja, directamente no
+habían RENDIDO al menos una autoevaluación entre Unidad 3 y 10. La causa: las
+unidades 9 y 10 también son opcionales (ver regla general arriba), lo que
+explica buena parte del hueco. Sigue valiendo el método: si en una corrida
+aparece un patrón de "autoevaluación en blanco" concentrado y dispareja entre
+alumnos que por lo demás están al día, es la señal de una unidad opcional no
+documentada todavía — mostrale el desglose al usuario antes de asumir que es
+bug o que es la realidad tal cual.
+
 ## Particularidades por materia (heredadas de `informe-pendientes-curso`, PERO reinterpretadas)
 
 Ojo: las exclusiones de la skill vieja (`materias-conocidas.md`) son para
 **auditoría de correcciones pendientes**, no para cierre de cursada. No las
 copies literal — la mayoría se invierten:
 
-- **Programación I (course id=38, "P1_Marzo 2026")**: TP1 y TP2 se corrigen
-  automático con Active-IA en el flujo de corrección normal, PERO para el
-  cierre de cursada **SÍ cuentan** en el umbral de TPs — un alumno no puede
-  regularizar si no los tiene aprobados, sin importar quién los corrigió.
-- **Programación II (course id=42)**: sin exclusiones conocidas — todos los
-  TPs y unidades cuentan. Reverificar el id en vivo (Fase 2), no asumir.
-- **Programación III (course id=44)**: las unidades 9 y 10 son **"opcionales,
-  no se evalúan"** (confirmado en sesión anterior) — excluirlas del
-  denominador tanto de `tps` como de `autoeval_pcts`, no metas placeholders
-  `null` por ellas. El TPI de Prog 3 no tiene instancia de recuperatorio
-  habilitada en la cohorte de referencia — `tpi_pcts` va a tener como máximo
-  una entrada, no lo trates como error si es así.
+**Regla general confirmada (04/07/2026): las unidades 9 y 10 son opcionales en
+TODAS las materias de Programación** (I, II y III) — excluirlas siempre del
+denominador de `tps` y `autoeval_pcts`, no metas placeholders `null` por ellas.
+
+- **Programación I (course id=38, "P1_Marzo 2026")**: además de 9/10, **Unidad
+  1 y Unidad 2 también son opcionales — se dan por vistas en el Pre-ingreso**
+  (confirmado con el usuario el 04/07/2026, tras una corrida real donde el 44%
+  de los alumnos tenía la autoevaluación de estas dos unidades en blanco en
+  Moodle, incluyendo alumnos que evidentemente cursaron toda la materia con
+  normalidad). **Para Prog I, opcionales = Unidad 1, 2, 9 y 10** — excluir las
+  4 del denominador de `tps` y `autoeval_pcts`. Esto reemplaza la nota anterior
+  sobre TP1/TP2 y Active-IA (esa hipótesis quedó descartada por la explicación
+  real del usuario).
+- **Programación II (course id=42)**: sin exclusiones propias conocidas más
+  allá de la regla general de 9/10. Reverificar el id en vivo (Fase 2), no
+  asumir.
+- **Programación III (course id=44)**: opcionales = Unidad 9 y 10 (regla
+  general, ya confirmado antes de esta sesión). El TPI de Prog 3 no tiene
+  instancia de recuperatorio habilitada en la cohorte de referencia —
+  `tpi_pcts` va a tener como máximo una entrada, no lo trates como error si es
+  así.
+
+**Verificar en vivo en cada corrida real** si aparecen otras unidades con el
+mismo patrón (autoevaluación en blanco para una porción grande y dispareja de
+la cohorte, incluyendo alumnos con el resto de la materia aprobada) — es la
+señal de que esa unidad también es opcional y no está documentada todavía acá.
 
 Todas estas particularidades cambian de cohorte a cohorte — reverificalas en
 vivo en la Fase 2 de `SKILL.md`, igual que hace `informe-pendientes-curso` con
