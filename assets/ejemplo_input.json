@@ -1,0 +1,48 @@
+{
+  "reglas_default": {
+    "autoeval_min_pct": 90,
+    "parcial_promocion_min_pct": 60,
+    "parcial_regulariza_min_pct": 40,
+    "tpi_min_pct": 60
+  },
+  "materias": [
+    {
+      "nombre_sheet": "Programacion 1",
+      "umbral_tp_pct": 100,
+      "comisiones": [
+        {
+          "titulo": "PROGRAMACION 1 - COMISION 1 - TUTOR MATIAS SANTIAGO TORRES",
+          "alumnos": [
+            {
+              "nombre": "GABRIEL ALFREDO BRIZUELA JIMENEZ",
+              "email": "gabojimenez140@gmail.com",
+              "tps": ["Aprobado", "Aprobado", "Aprobado"],
+              "autoeval_pcts": [96.0, 100.0, 91.0],
+              "parcial1_pcts": [45, 60],
+              "parcial2_pcts": [100],
+              "tpi_pcts": [90]
+            },
+            {
+              "nombre": "LUCA JOAQUIN CHIALVO",
+              "email": "lucachialvo123@gmail.com",
+              "tps": ["Aprobado", "Aprobado", "Aprobado"],
+              "autoeval_pcts": [96.0, 100.0, 91.0],
+              "parcial1_pcts": [80],
+              "parcial2_pcts": [40, 70],
+              "tpi_pcts": [null]
+            },
+            {
+              "nombre": "GUIDO AGUERO",
+              "email": "guidoaguero14@gmail.com",
+              "tps": ["Aprobado", "Aprobado", "Desaprobado"],
+              "autoeval_pcts": [96.0, 100.0],
+              "parcial1_pcts": [],
+              "parcial2_pcts": [],
+              "tpi_pcts": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
